@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Which one is Better</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .vote-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .vote-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .vote-button:hover {
+            background-color: #45a049;
+        }
+        .vote-options {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="vote-container">
+        <h1>Who do you think should win?</h1>
+        <div class="vote-options">
+            <button class="vote-button" onclick="vote('Capuchino Assassino')">Vote for Capuchino Assassino</button>
+            <button class="vote-button" onclick="vote('Hyderabadi Irani Chai')">Vote for Hyderabadi Irani Chai</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function vote(person) {
+            document.getElementById("result").textContent = "You voted for " + person + "!";
+            // Optionally, you could send the vote to a server for counting
+        }
+    </script>
+</body>
+</html>
